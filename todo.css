@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+}
+
+/*要显示全部*/
+.all {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/*全部 button 按钮的鼠标样式*/
+button {
+    cursor: pointer;
+}
+
+/*todo 添加行*/
+.todo-add {
+    position:fixed;
+    padding: 1.2em 0em 0em 8em;
+}
+
+/*todo 格式*/
+.todo-form {
+
+}
+
+/*输入框*/
+#id-input-todo {
+    border: 2px solid white;
+    border-radius: 3px;
+    font-size: 16px;
+    word-break: break-all;
+}
+
+#id-input-todo:focus{
+    border: 3px solid #18bb9c;
+}
+
+/*添加按钮*/
+#id-button-add {
+    width: 100px;
+    height: 34px;
+    color: white;
+    letter-spacing: 1px;
+    /*background: #3385ff;*/
+     background: #2d3e50;
+    /*border-bottom: 1px #3385ff #2d78f4;*/
+    border: solid 1px #2d3e50;
+    border-radius: 5%;
+}
+
+/*当前要显示的页码*/
+.active {
+    background: #0e7562;
+}
+
+/*列表头部*/
+.todo-head {
+    width: 75%;
+    top: 3%;
+    position: relative;
+    height: 2em;
+    margin: 0 auto;
+    border-top: solid 1px gray;
+    padding-top: 1%;
+}
+
+/*列表头部名称*/
+.span_title_1 {
+    position: relative;
+    left: 2%;
+}
+.span_title_2 {
+    position: relative;
+    left: 42%;
+}
+.span_title_3 {
+    position: relative;
+    left: 61%;
+}
+.span_title_4 {
+    position: relative;;
+    left: 80%;
+}
+/*todo 列表容器*/
+#id-div-container {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    top: 4%;
+}
+
+/* 完成的样式 */
+.done {
+    /*color: gray;*/
+    /*text-decoration: line-through;*/
+    background: gray !important;
+    position: absolute;
+}
+.state {
+    position: absolute;
+    left: 45%;
+}
+
+.todo-buttons {
+    position: absolute;
+    right: 2%;
+}
+
+/*完成、删除按钮*/
+.todo-done {
+    width: 60px;
+    height: 22px;
+    letter-spacing: 1px;
+    color: white;
+    border: solid 1px #18bb9c;
+    background: #18bb9c;
+    border-radius: 8%;
+}
+.todo-delete {
+    width: 60px;
+    height: 22px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #2d78f4;
+    color: white;
+    border: solid 1px #e1544d;
+    background: #e1544d;
+    border-radius: 8%;
+}
+
+/*日期*/
+.date {
+    position: absolute;
+    left: 60%;
+}
+
+/*单个todo */
+.todo-cell {
+    position: relative;
+    height: 2em;
+    /*行高和高度一样，使内容垂直居中*/
+    line-height: 2em;
+    border-bottom: 1px solid white;
+}
+
+.todo-cell:nth-child(2n + 1) {
+    background: #f6f6f6;
+}
+
+.todo-content {
+    position: absolute;
+    left: 1%;
+}
+
+/*列表中的操作按钮*/
+/*.control_buttons {
+    position: relative;
+    left: 62%;
+}*/
+
+/*翻页行*/
+.page {
+    position: absolute;;
+    width: 100%;
+    text-align: center;
+    bottom: 15%;
+    height: 1.5em;
+}
+.page > * {
+    display: inline-block;
+    background: #18bb9c;
+    color: white;
+    border-top: none;
+    border-bottom: none;
+}
+/*翻页按钮*/
+.last_page {
+    position: relative;
+    top: -47%;
+    height: 2.38em;
+    width: 2.1em;
+    border-right: solid 1px black;
+    border-left: none;
+    left: 0.3%;
+    /*圆角，左上角开始，顺时针四个角*/
+    border-radius: 20% 0 0 20%;
+    outline: none;
+    /*鼠标样式*/
+    cursor: pointer;
+}
+.next_page {
+    position: relative;
+    top: -47%;
+    height: 2.38em;
+    width: 2.1em;
+    border-left: solid 1px black;
+    border-right: none;
+    right: 0.55%;
+    /*圆角，左上角开始，顺时针四个角*/
+    border-radius: 0 20% 20% 0;
+    outline: none;
+    /*鼠标养生*/
+    cursor: pointer;
+}
+
+/*全部的页码*/
+.pagination {
+    position: relative;
+    top: 5%;
+}
+
+/*每一个页码*/
+.page_number {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    /*浮动，消除两个span之间的空隙*/
+    float: left;
+    /*行距，使span中的文字垂直居中*/
+    line-height: 2em;
+    /*鼠标样式*/
+    cursor: pointer;
+}
+body {
+    background-color: white;
+}
+#header {
+}
+.header-inner {
+    position: absolute;
+    height: 2.5em;
+    z-index:30;
+    padding-left: 0px;
+    border-left: 0px;
+}
+.header-logo {
+    position: fixed;
+    padding: 1.5em 0em 0em 1.5em;
+    /*上 右下左*/
+}
+.dec1 {
+    height: 5em;
+    position: sticky;
+}
+.dec {
+    color: black;
+    background: #80A5B9;
+    position: fixed;
+    height:4.0em;
+    top: 0.2em;
+    width: 110%;
+    left: -0.1%;
+    opacity: 0.9;
+}
+.dec2 {
+    position: fixed;
+    background-color: #E72A2A;
+    width: 110%;
+    height: 0.3em;
+    top: -0.1%;
+    left: -0.1%;
+}
+.title-link,.siteTitle {
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    text-transform:none;
+    text-decoration:none;
+}
+.collection {
+    font-family: sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    color: white;
+    border-width: 0;
+}
+a:active, a:hover{
+    color: #e3efd9;
+    background: radial-gradient(red,red,#333333);
+    border-radius: 1em;
+    border-bottom: white;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+}
+#headerNav {
+    position:fixed;
+    left: 55%;
+    top: 1.5em;
+}
+#mainNavigation {
+
+}
+.login {
+    font-family: sans-serif;
+    font-size: 0.5em;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    color: white;
+    border-width: 0;
+}
+.register {
+    font-family: sans-serif;
+    font-size: 0.5em;
+    letter-spacing: 0.05em;
+
+    font-style: normal;
+    color: white;
+    border-width: 0;
+}
+.h-active {
+    color: white;
+    background-color: red;
+    border-radius: 0.3em;
+}
+.container {
+    /*display: none;*/
+}
+.y-hide {
+    display: none;
+}
+
+.y-menu-content {
+    height: 100px;
+    border: 1px solid red;
+    display: none;
+}
+.y-menu-content.active {
+    display: block;
+}
+
+.y-item.y-highlight img {
+
+}
+img {
+    /* transition 这个 css 指定了某个属性发生变化的时候自动使用动画效果和动画时间 */
+    transition: width 1s, height 1s;
+}
+.y-item img {
+
+}
+
+
+.y-slide {
+    position: relative;
+}
+.y-slide-image {
+    display: none;
+}
+/*.y-slide-image*/
+.y-active {
+    display: inline-block;;
+}
+.y-slide-button.left {
+    left: 0;
+    height: 50px;
+}
+.y-slide-button.right {
+    right: 0;
+    height: 50px;
+}
+.y-vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.y-slide-indicators {
+    position: absolute;
+    bottom: 10px;
+}
+.y-slide-indi {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+}
+.y-white {
+    background: white;
+}
+.y-label {
+           display: inline-block;
+       }
+.show {
+   display: block !important;
+}
+
+.y-box {
+   /* block 元素居中套路 */
+   width: 300px;
+   margin: 0 auto;
+}
+.y-content {
+   display: none;
+   color: red;
+   width: 100px;
+   position: fixed;
+}
+
+.y-item {
+    display: inline-block;
+}
+
+.highlight {
+    color: #e3efd9;
+    background: radial-gradient(red,red,#333333);
+    border-radius: 1em;
+}
