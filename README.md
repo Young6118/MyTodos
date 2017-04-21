@@ -1,2 +1,1 @@
 # MyTodos
-![](./todo.gif)
