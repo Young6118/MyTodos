@@ -1,2 +1,2 @@
 # MyTodos
-![](./background.jpg)
+![](./todo.gif)
